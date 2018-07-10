@@ -2,6 +2,7 @@
 #define IMU_H_
 
 #include "constants.h"
+#include "Arduino.h"
 
 #include <Wire.h>
 #include <stdbool.h>
@@ -24,7 +25,6 @@ float get_roll();
 float get_pitch();
 
 void read_mpu_6050_data();
-
 
 bool Wait(const unsigned long &Time);
 

@@ -1,5 +1,6 @@
 #include "IMU.h"
 #include "constants.h"
+#include "Arduino.h"
 
 #include <Wire.h>
 #include <stdbool.h>
@@ -66,8 +67,9 @@ void calibrate_Gyro(){
     gyro_x_cal += gyro_x;                                              //Add the gyro x offset to the gyro_x_cal variable
     gyro_y_cal += gyro_y;                                              //Add the gyro y offset to the gyro_y_cal variable
     gyro_z_cal += gyro_z;                                              //Add the gyro z offset to the gyro_z_cal variable
-    
-    _delay_ms (3);
+
+    delay(3);
+//    _delay_ms (3);
   }
 
   // divide by 1000 to get avarage offset
